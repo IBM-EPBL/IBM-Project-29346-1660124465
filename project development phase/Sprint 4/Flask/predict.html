@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Crude Oil Price Prediction </title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}">
+</head>
+<body style="text-align:center;background-color: lightsteelblue;">
+    <h1 style="color: white;font-size: 50px;font-family: roboto;"> 
+    Crude Oil Price Prediction </h1>
+    <h1 style="color: white;font-size: 50px;font-family: roboto;"> 
+        Enter the Oil price for 10 days </h1>
+        <form action="/predict" method="POST" enctype = "multipart/form-data">
+            <div style="color:green;font-size:50px;font-family:roboto;">
+                {{prediction}}
+            </div>
+        <input type="text" name="val" style="border-radius: 18px;padding: 20px;width: 300px;height: 15px;text-align: center; align:center;" >
+         <br> <br> <br>
+        <input type="submit"/ style="border-radius: 9px;;padding: 10px;width: 150px;
+        height: 40px;text-align: center;background: #003d66;color: white;">
+        </form>
+        <br>
+        <form action="/predict" method="GET" enctype = "multipart/form-data">
+        <input type="submit"/ value="Reset" style="border-radius: 9px;;padding: 10px;width: 150px;
+        height: 40px;text-align: center;background: #003d66;color: white;">
+        </form>    
+</body>
